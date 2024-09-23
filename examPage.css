@@ -1,0 +1,140 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Showdex;
+    src: url(./fonts/Showdex.otf);
+}
+@font-face {
+    font-family: Ghost Marker;
+    src: url(./fonts/GhostMarker.otf);
+}
+@font-face {
+    font-family: call me jigo;
+    src: url(./fonts/jigo.otf);
+}
+body{
+    background-image: url('./images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav{
+    background-color: rgb(21, 6, 6);
+    display: flex;
+    box-sizing: border-box;
+    color: aliceblue;
+}
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    position: absolute;
+    top: 20px;
+    font-family: Showdex;
+    font-size: 20px;
+    cursor: pointer;
+}
+.rightSide{
+    position: relative;
+    left: 1020px;
+}
+.logo:hover{
+    cursor: pointer;
+}
+.logo a{
+    font-family: Ghost Marker;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+    
+}
+.logo p:hover{
+    transform: rotatez(20deg);
+    transition: ease-in 1s;
+}
+.logo img:hover{
+    transform: scale(1.2);
+    transition: ease-in 0.5s;
+}
+ul a{
+    text-decoration: none;
+    color: blueviolet;
+}
+ul a:hover{
+    color: rgb(54, 180, 52);
+}
+.Box{
+    border: 0px solid black;
+    border-radius: 50px;
+    box-sizing: border-box;
+    height: 350px;
+    width: 75%;
+    margin: auto;
+    position: relative;
+    top: 115px;
+    backdrop-filter: blur(7px);
+    background-color: rgb(235, 213, 213 , 0.4);
+    text-shadow: rgb(51, 135, 54);
+}
+.Box:hover{
+    transition: ease-in 1s;
+    background-color: black
+    
+}
+footer{
+    position: absolute;
+    border: 0px solid black;
+    width: 100%;
+    height: 70px;
+    bottom:0px;
+    background-color: rgb(3, 14, 69);
+    color: white;
+}
+footer p{
+    position: absolute;
+    left: 670px;
+    font-family:fantasy;
+    font-size: 24px;
+}
+.Box h1{
+    position: relative;
+    top: 60px;
+    left: 180px;
+    font-family: Showdex;
+    font-size: 60px;
+    color: rgb(51, 135, 54);
+    font-weight: bolder;
+    width:fit-content
+}
+.Box p{
+    position: absolute;
+    bottom: 80px;
+    left: 2%;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: cursive;
+    color: rgb(103, 8, 8);
+}
+.Box a{
+    text-decoration: none;
+    border:4px solid;
+    padding: 5px;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 7px;
+    left: 540px;
+    font-size: larger;
+    font-weight: bolder;
+
+}
+.Box a:hover{
+    background-color: rgb(19, 209, 63);
+    transform: matrix(1, 0, 0, 1, 10, 0);
+    transition: ease-in 1s;
+    font-family: Ghost Marker;
+    color: black;
+}

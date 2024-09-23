@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Time</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        @font-face {
+            font-family: Showdex;
+            src: url(./fonts/Showdex.otf);
+        }
+        @font-face {
+            font-family: Ghost Marker;
+            src: url(./fonts/GhostMarker.otf);
+        }
+        body{
+           background-image: url(./images/board.jpg);
+           background-size: cover;
+           background-position-y: -170px;
+           
+        }
+        nav{
+            background-color: rgb(21, 6, 6);
+            display: flex;
+            box-sizing: border-box;
+            color: aliceblue;
+        }
+        .nav-links ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            position: absolute;
+            top: 20px;
+            font-family: Showdex;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .rightSide{
+            position: relative;
+            left: 1020px;
+        }
+        .logo:hover{
+            cursor: pointer;
+        }
+        .logo a{
+            font-family: Ghost Marker;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: green;
+            
+        }
+        .logo p:hover{
+            transform: rotatez(20deg);
+            transition: ease-in 1s;
+        }
+        .logo img:hover{
+            transform: scale(1.2);
+            transition: ease-in 0.5s;
+        }
+        ul a{
+            text-decoration: none;
+            color: blueviolet;
+        }
+        ul a:hover{
+            color: rgb(54, 180, 52);
+        }
+        footer{
+        position: absolute;
+        border: 0px solid black;
+        width: 100%;
+        height: 70px;
+        bottom:0px;
+        background-color: rgb(3, 14, 69);
+        color: white;
+        }
+        footer:hover{
+            background-color: transparent;
+        }
+        footer p{
+            position: absolute;
+            left: 670px;
+            font-family:fantasy;
+            font-size: 24px;
+        }
+        .page{
+            display: none;
+        }
+        .active{
+            display: block;
+        }
+        .content{
+            position: absolute;
+            left: 45px;
+            top: 220px;
+            background-color: rgba(52, 63, 78, 0.372);
+            height: 370px;
+            width: 770px;
+            border-radius: 40px;
+        }
+        .content h1,p,button{
+            font-family: monospace;
+        }
+        #questions{
+            position: absolute;
+            left: 20px;
+            top: 100px;
+            color: aliceblue;
+            font-weight: bolder;
+            font-size: 1.1rem;
+        }
+        .info{
+            border: 2px solid rgb(244, 244, 244);
+            width: 40%;
+            height: 170px;
+            margin: auto;
+            padding: 20px;
+            position: absolute;
+            right: 40px;
+            top: 140px;
+            color: white;
+            border-radius: 50px;
+        }
+        .info h3{
+            position: absolute;
+            right: 250px;
+            top:160px;
+            font-family:'Times New Roman', Times, serif;
+            color: rgb(250, 254, 249);
+            font-size: 25px;
+            
+        }
+        .timer{
+            background-color: rgba(134, 24, 114, 0.267);
+            border-radius: 50%;
+            width:fit-content ;
+            padding: 7px;
+            position: absolute;
+            right: 170px;
+            top: 290px;
+            font-family:monospace;
+            font-size:19px;
+            color:rgb(242, 246, 240);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="examPage.html"><img src="./images/Logo.png" id="pageLogo" width="70px" height="70px"></a>
+            <a href="examPage.html"><p style="font-family: Ghost Marker;">Exam House</p></a>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li class="leftSide"><a href="Welcome.html">Welcome</a></li>
+                <li class="leftSide"><a href="GoExam.html">Go Exam</a></li>
+                <li class="rightSide"><a href="SignIn.html">Sign Up</a></li>
+                <li class="rightSide"><a href="LogIn.html">Log In</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="timer">
+        <h1 id ='timer'>01:00</h1>
+    </div>
+    <div class="info">
+        <h2>AAFM India CWM_LEVEL_1 Exam Actual Questions</h2>
+        <br>
+        <h4>The questions for CWM_LEVEL_1 were last updated on Sept. 14, 2024.</h4>
+        <br>
+        <p id="pageNum"></p>
+        <h3>Timer:</h3>
+    </div>
+    <div class="content">
+        <div id="questions">
+            <div id="question1" class="page active">
+                <h1>Q1: What is the Capital of Australia</h1>
+                <p>Canberra</p>
+            </div>
+            <div id="question2" class="page ">
+                <h1>Q2: What is the Smallest Country of the World</h1>
+                <p>Vatican City, with a landmass of just 0.49 square kilometers (0.19 square miles). </p>
+            </div>
+            <div id="question3" class="page">
+                <h1>Q3: What is the Richest Country in the world</h1>
+                <p>Luxembourg is the world's wealthiest country, with a GDP per capita of $143,742 thousand, according to the IMF.</p>
+            </div>
+            <div id="question4" class="page">
+                <h1>Q4: What is the Fastest Car in the World</h1>
+                <p>Koenigsegg Jesko Absolut—330 MPH.</p>
+            </div>
+            <div id="question5" class="page">
+                <h1>Q5: What is the Fastest Animal in the World</h1>
+                <p>Cheetah ,Capable of going from 0 to 60 miles per hour in less than three seconds</p>
+            </div>
+        </div>
+    
+        <br>
+        <div id="Navigation">
+            <button onclick="prevPage()" id="prevBtn">Prev</button>
+            <button onclick="nextPage()"id="nextBtn">Next</button>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Exam House</p>
+    </footer>
+    <script src="GoExam.js"></script>
+</body>
+</html>
